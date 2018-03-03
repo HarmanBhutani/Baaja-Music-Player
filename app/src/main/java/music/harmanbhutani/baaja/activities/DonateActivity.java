@@ -59,7 +59,7 @@ public class DonateActivity extends BaseThemedActivity implements BillingProcess
 
         productListView = (LinearLayout) findViewById(R.id.product_list);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        status = (TextView) findViewById(R.id.donation_status);
+//        status = (TextView) findViewById(R.id.donation_status);
 
         if (action != null && action.equals("restore")) {
             status.setText("Restoring purchases..");
