@@ -57,11 +57,11 @@ public class Helpers {
 
     public static class AboutDialog extends DialogFragment {
 
-        String urlgooglelus = "https://plus.google.com/u/0/+NamanDwivedi14";
+        String urlgooglelus = "https://github.com/naman14/Timber";
         String urlcommunity = "https://plus.google.com/communities/111029425713454201429";
         String urltwitter = "https://twitter.com/naman1405";
         String urlgithub = "https://github.com/naman14";
-        String urlsource = "https://github.com/naman14/Timber/issues";
+        String urlsource = "https://github.com/HarmanBhutani/Baaja-Music-Player/issues";
 
         public AboutDialog() {
         }
