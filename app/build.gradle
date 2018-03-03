@@ -29,7 +29,7 @@ android {
             versionNameSuffix "-debug"
             minifyEnabled false
             applicationIdSuffix '.dev'
-            manifestPlaceholders = [ appNameSuffix:" Dev"]
+            manifestPlaceholders = [ appNameSuffix:""]
 
             resValue "string", "fabric_api_key", "12345"
             resValue "string", "play_billing_license_key", "12345"
