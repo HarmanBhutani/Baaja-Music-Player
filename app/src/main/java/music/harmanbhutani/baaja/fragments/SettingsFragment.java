@@ -75,7 +75,7 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
         xposed = findPreference(XPOSED);
 
         lastFMlogin = findPreference(LASTFM_LOGIN);
-        updateLastFM();
+//        updateLastFM();
 //        themePreference = (ListPreference) findPreference(KEY_THEME);
         startPagePreference = (ListPreference) findPreference(KEY_START_PAGE);
 
@@ -130,8 +130,7 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
         restoreIntent.putExtra("title", "Restoring purchases..");
         restoreIntent.setAction("restore");
 
-        findPreference("support_development").setIntent(new Intent(getActivity(), DonateActivity.class));
-        findPreference("restore_purchases").setIntent(restoreIntent);
+
 
         lockscreen.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
@@ -143,35 +142,9 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
             }
         });
 
-        xposed.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-            @Override
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                Bundle extras = new Bundle();
-                extras.putBoolean("xtrack",(boolean)newValue);
-                mPreferences.updateService(extras);
-                return true;
-            }
-        });
 
-        lastFMlogin.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                if (lastFMlogedin) {
-                    LastFmClient.getInstance(getActivity()).logout();
-                    Bundle extras = new Bundle();
-                    extras.putString("lf_token","logout");
-                    extras.putString("lf_user",null);
-                    mPreferences.updateService(extras);
-                    updateLastFM();
-                } else {
-                    LastFmLoginDialog lastFmLoginDialog = new LastFmLoginDialog();
-                    lastFmLoginDialog.setTargetFragment(SettingsFragment.this, 0);
-                    lastFmLoginDialog.show(getFragmentManager(), LastFmLoginDialog.FRAGMENT_NAME);
 
-                }
-                return true;
-            }
-        });
+
 
     }
 
@@ -252,16 +225,5 @@ public class SettingsFragment extends PreferenceFragment implements SharedPrefer
     }
 
 
-    public void updateLastFM() {
-        String username = LastFmClient.getInstance(getActivity()).getUsername();
-        if (username != null) {
-            lastFMlogedin = true;
-            lastFMlogin.setTitle("Logout");
-            lastFMlogin.setSummary(String.format(getString(R.string.lastfm_loged_in),username));
-        } else {
-            lastFMlogedin = false;
-            lastFMlogin.setTitle("Login");
-            lastFMlogin.setSummary(getString(R.string.lastfm_pref));
-        }
-    }
+
 }

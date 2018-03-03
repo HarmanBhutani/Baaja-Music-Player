@@ -21,7 +21,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            manifestPlaceholders = [ appNameSuffix:""]
+            manifestPlaceholders = [appNameSuffix: ""]
 
         }
         debug {
@@ -29,7 +29,7 @@ android {
             versionNameSuffix "-debug"
             minifyEnabled false
             applicationIdSuffix '.dev'
-            manifestPlaceholders = [ appNameSuffix:""]
+            manifestPlaceholders = [appNameSuffix: ""]
 
             resValue "string", "fabric_api_key", "12345"
             resValue "string", "play_billing_license_key", "12345"
@@ -53,6 +53,7 @@ repositories {
 
 dependencies {
     //my updated dependences
+    implementation 'com.google.firebase:firebase-ads:11.6.0'
     compile 'com.android.support:cardview-v7:23.3.+'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
@@ -94,3 +95,5 @@ dependencies {
 
 
 }
+
+//apply plugin: 'com.google.gms.google-services'

@@ -14,7 +14,7 @@
     <music.harmanbhutani.baaja.widgets.ThemedPreferenceCategory android:title="@string/personalisation">
 
         <com.afollestad.appthemeengine.prefs.ATECheckBoxPreference
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="dark_theme"
             android:persistent="true"
             android:summary="@string/dark_theme_summary"
@@ -88,7 +88,16 @@
 
     </music.harmanbhutani.baaja.widgets.ThemedPreferenceCategory>
 
+    <music.harmanbhutani.baaja.widgets.ThemedPreferenceCategory android:title="">
 
+
+    </music.harmanbhutani.baaja.widgets.ThemedPreferenceCategory>
+
+    <music.harmanbhutani.baaja.widgets.ThemedPreferenceCategory android:title="">
+
+
+
+    </music.harmanbhutani.baaja.widgets.ThemedPreferenceCategory>
 
 
 

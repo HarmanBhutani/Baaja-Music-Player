@@ -76,10 +76,10 @@ public class Helpers {
             TextView appversion = (TextView) aboutBodyView.findViewById(R.id.app_version_name);
 
             TextView googleplus = (TextView) aboutBodyView.findViewById(R.id.googleplus);
-            TextView twitter = (TextView) aboutBodyView.findViewById(R.id.twitter);
-            TextView github = (TextView) aboutBodyView.findViewById(R.id.github);
+//            TextView twitter = (TextView) aboutBodyView.findViewById(R.id.twitter);
+//            TextView github = (TextView) aboutBodyView.findViewById(R.id.github);
             TextView source = (TextView) aboutBodyView.findViewById(R.id.source);
-            TextView community = (TextView) aboutBodyView.findViewById(R.id.feature_request);
+//            TextView community = (TextView) aboutBodyView.findViewById(R.id.feature_request);
 
             TextView dismiss = (TextView) aboutBodyView.findViewById(R.id.dismiss_dialog);
             dismiss.setOnClickListener(new View.OnClickListener() {
@@ -89,8 +89,8 @@ public class Helpers {
                 }
             });
             googleplus.setPaintFlags(googleplus.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-            twitter.setPaintFlags(twitter.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-            github.setPaintFlags(github.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+//            twitter.setPaintFlags(twitter.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+//            github.setPaintFlags(github.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
             googleplus.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -101,24 +101,24 @@ public class Helpers {
                 }
 
             });
-            twitter.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent i = new Intent(Intent.ACTION_VIEW);
-                    i.setData(Uri.parse(urltwitter));
-                    startActivity(i);
-                }
-
-            });
-            github.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent i = new Intent(Intent.ACTION_VIEW);
-                    i.setData(Uri.parse(urlgithub));
-                    startActivity(i);
-                }
-
-            });
+//            twitter.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent i = new Intent(Intent.ACTION_VIEW);
+//                    i.setData(Uri.parse(urltwitter));
+//                    startActivity(i);
+//                }
+//
+//            });
+//            github.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent i = new Intent(Intent.ACTION_VIEW);
+//                    i.setData(Uri.parse(urlgithub));
+//                    startActivity(i);
+//                }
+//
+//            });
             source.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -127,19 +127,19 @@ public class Helpers {
                     startActivity(i);
                 }
             });
-            community.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent i = new Intent(Intent.ACTION_VIEW);
-                    i.setData(Uri.parse(urlcommunity));
-                    startActivity(i);
-                }
-            });
+//            community.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent i = new Intent(Intent.ACTION_VIEW);
+//                    i.setData(Uri.parse(urlcommunity));
+//                    startActivity(i);
+//                }
+//            });
             try {
                 PackageInfo pInfo = getActivity().getPackageManager().getPackageInfo(getActivity().getPackageName(), 0);
                 String version = pInfo.versionName;
                 int versionCode = pInfo.versionCode;
-                appversion.setText("Timber " + version);
+                appversion.setText("Baaja ");
             } catch (PackageManager.NameNotFoundException e) {
                 e.printStackTrace();
             }
