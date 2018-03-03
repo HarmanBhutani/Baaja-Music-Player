@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="55dp">
+    android:layout_height="wrap_content"
+    >
+
 
     <music.harmanbhutani.baaja.widgets.BaseRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,6 +23,7 @@
 
     <include layout="@layout/empty_view"/>
 
+
     <music.harmanbhutani.baaja.widgets.FastScroller
         android:id="@+id/fastscroller"
         android:layout_width="wrap_content"
@@ -25,4 +33,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignTop="@id/recyclerview" />
 
+
+
 </RelativeLayout>
+
+    </android.support.v7.widget.CardView>

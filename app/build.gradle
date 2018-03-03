@@ -52,6 +52,14 @@ repositories {
 }
 
 dependencies {
+    //my updated dependences
+    compile 'com.android.support:cardview-v7:23.3.+'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+
+
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
     implementation "com.android.support:design:$rootProject.supportLibraryVersion"
