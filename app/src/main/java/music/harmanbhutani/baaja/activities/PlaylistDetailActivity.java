@@ -56,6 +56,9 @@ import music.harmanbhutani.baaja.utils.PreferencesUtility;
 import music.harmanbhutani.baaja.utils.TimberUtils;
 import music.harmanbhutani.baaja.widgets.DividerItemDecoration;
 import music.harmanbhutani.baaja.widgets.DragSortRecycler;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -75,6 +78,7 @@ public class PlaylistDetailActivity extends BaseActivity implements ATEActivityT
     private TextView playlistname;
     private View foreground;
     private boolean animate;
+
 
     private Runnable playlistLastAdded = new Runnable() {
         public void run() {

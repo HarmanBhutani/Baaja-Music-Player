@@ -30,6 +30,9 @@ import android.view.ViewGroup;
 
 import com.afollestad.appthemeengine.ATE;
 import com.afollestad.appthemeengine.Config;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import music.harmanbhutani.baaja.R;
 import music.harmanbhutani.baaja.utils.ATEUtils;
 import music.harmanbhutani.baaja.utils.Helpers;
@@ -42,6 +45,8 @@ public class MainFragment extends Fragment {
 
     private PreferencesUtility mPreferences;
     private ViewPager viewPager;
+    private AdView mAdView;
+
 
     @Override
     public void onCreate(final Bundle savedInstanceState) {
@@ -53,6 +58,11 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(
                 R.layout.fragment_main, container, false);
+
+        mAdView = (AdView) rootView.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
         Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
